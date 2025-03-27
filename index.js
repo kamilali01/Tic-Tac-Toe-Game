@@ -53,12 +53,26 @@ const winningCombinations = [
 ];
 function showWinnerPopup(message) {
     winnerText.innerText = message;
+    
+    // Make modal and overlay visible first
     modal.style.display = "block";
     modalOverlay.style.display = "block";
+
+    // Use a short delay before adding the "show" class
+    setTimeout(() => {
+        modal.classList.add("show");
+        modalOverlay.classList.add("show");
+    }, 10); // Small delay to allow CSS transition to apply
 }
 
 function closeModal() {
-    modal.style.display = "none";
-    modalOverlay.style.display = "none";
-    resetBoard();
+    modal.classList.remove("show");
+    modalOverlay.classList.remove("show");
+
+    // Wait for animation to complete before hiding
+    setTimeout(() => {
+        modal.style.display = "none";
+        modalOverlay.style.display = "none";
+        resetBoard();
+    }, 500);
 }
