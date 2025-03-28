@@ -1,5 +1,6 @@
 let xsTurn = true;
-
+const turn = document.querySelector(".turn");
+turn.innerHTML = " X's turn";
 const modal = document.querySelector(".modal");
 const modalOverlay = document.querySelector(".modal-overlay");
 const winnerText = document.getElementById("winnerText");
@@ -9,8 +10,8 @@ cells.forEach((cell) => {
     cell.addEventListener("click", () => {
         if(cell.innerHTML !== ""){return;}
         console.log(`You clicked on ${cell.className}`);
-        if(xsTurn == true){cell.innerHTML = 'x'; xsTurn = false; console.log(xsTurn)}
-        else{cell.innerHTML = 'o'; xsTurn = true;console.log(xsTurn)}
+        if(xsTurn == true){cell.innerHTML = 'x'; xsTurn = false; console.log(xsTurn);turn.innerHTML = " O's turn";}
+        else{cell.innerHTML = 'o'; xsTurn = true;console.log(xsTurn); turn.innerHTML = " X's turn";}
         if (checkWinner()) {
             showWinnerPopup(cell.innerHTML + " Wins!");
         }
@@ -34,6 +35,7 @@ function resetBoard() {
     setTimeout(() => {
         cells.forEach(cell => (cell.innerHTML = ""));
         xsTurn = true; // Reset turn to X
+        turn.innerHTML = " X's turn"
     }, 200);
 }
 
