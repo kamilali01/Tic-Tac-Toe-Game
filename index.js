@@ -146,3 +146,6 @@ function toggleMusic() {
 document.getElementById("ac-btn").addEventListener("click", function () {
     window.location.href = "ac.html";
 });
+document.getElementById("op-btn").addEventListener("click", function () {
+    window.location.href = "op.html";
+});

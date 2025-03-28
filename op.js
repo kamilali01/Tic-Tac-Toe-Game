@@ -1,12 +1,12 @@
-const xImage = "./img/assassins-creed.png";  // Replace with the actual path to your X image
-const oImage = "./img/templar-icon.png";  // Replace with the actual path to your O image
+const xImage = "./img/strawhat.png";  // Replace with the actual path to your X image
+const oImage = "./img/anchor.png";  // Replace with the actual path to your O image
 
 let xScore = 0;  // Initialize X score
 let oScore = 0;  // Initialize O score
 
 let xsTurn = true;
 const turn = document.querySelector(".turn");
-turn.innerHTML = " Assassin'S turn";
+turn.innerHTML = " Strawhat'S turn";
 const modal = document.querySelector(".modal");
 const modalOverlay = document.querySelector(".modal-overlay");
 const winnerText = document.getElementById("winnerText");
@@ -16,7 +16,6 @@ const cells = document.querySelectorAll(".cell");
 const placeSound = document.getElementById("place-sound");
 const winSound = document.getElementById("win-sound");
 const loseSound = document.getElementById("lose-sound");
-
 
 let gameBoard = ['', '', '', '', '', '', '', '', '']; // Keeps track of the game state
 
@@ -46,12 +45,14 @@ function placeMarker(cell, index) {
     if (checkWinner(marker)) {
         setTimeout(() => {
             if (marker === 'X') {
-                winnerText.innerHTML = `AssassinS wins!`;
+                winnerText.innerHTML = `Strawhats wins!`;
+                winSound.currentTime = 2.3;
                 winSound.play();
             } else {
-                winnerText.innerHTML = `TemplarS wins!`;
+                winnerText.innerHTML = `Marines wins!`;
                 loseSound.play();
             }
+            
             updateScore(marker);
             showModal();  // This will show the winner modal with the correct message
         }, 300);
@@ -68,7 +69,7 @@ function placeMarker(cell, index) {
     }
 
     xsTurn = !xsTurn; // Toggle the turn
-    turn.innerHTML = xsTurn ? "Assassin'S turn" : "Templar'S turn";
+    turn.innerHTML = xsTurn ? "Strawhat'S turn" : "Marine'S turn";
 }
 
 function checkWinner(marker) {
@@ -133,7 +134,7 @@ function resetBoard() {
         cell.innerHTML = ''; // Clear the cells
     });
     xsTurn = true;
-    turn.innerHTML = " Assassin'S turn";
+    turn.innerHTML = " Strawhat'S turn";
 }
 
 function resetScore() {
@@ -145,10 +146,12 @@ function resetScore() {
 
 const music = document.getElementById("bg-music");
 const musicBtn = document.getElementById("music-btn");
+music.currentTime = 3;
 music.volume = 0.3;
 placeSound.playbackRate = 2;
 winSound.playbackRate = 1.5;
-loseSound.volume = 0.5;
+winSound.volume = 0.2;
+loseSound.volume = 1;
 
 document.addEventListener("DOMContentLoaded", function () {
     let bgMusic = document.getElementById("bg-music");
@@ -168,4 +171,7 @@ document.getElementById("og-btn").addEventListener("click", function () {
 });
 document.getElementById("op-btn").addEventListener("click", function () {
     window.location.href = "op.html";
+});
+document.getElementById("ac-btn").addEventListener("click", function () {
+    window.location.href = "ac.html";
 });

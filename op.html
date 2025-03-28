@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicxTacxToe</title>
-    <link rel="stylesheet" href="ac.css">
+    <link rel="stylesheet" href="op.css">
 </head>
 <body>
-    <h1 class="title">AssassinS VS TemplarS</h1>
+    <div class="title-container">
+        <img class="title" src="./img/onepiece-logo.png" alt="One piece logo">
+    </div>
+    
     <p class="turn"></p>
     
     <div class="main">
@@ -27,7 +30,7 @@
       
     </div>
     <div class="scorePan"><h2>Score</h2>
-      <p style="font-size: 2rem;"><img style="max-height: 1em; filter: invert(1);" src="./img/assassins-creed.png" alt="">: <span id="x-score">0</span> - <img style="max-height: 1em; filter: invert(1);" src="./img/templar-icon.png" alt="">: <span id="o-score">0</span></p>
+      <p style="font-size: 2rem;"><img style="max-height: 1em;" src="./img/strawhot-color.png" alt="">: <span id="x-score">0</span> - <img style="max-height: 1em; filter: invert(1); " src="./img/marine-icon.png" alt="">: <span id="o-score">0</span></p>
       <button id="reset-score-btn" onclick="resetScore()">Reset Score</button></div>
     
     <!-- Winner Modal -->
@@ -37,20 +40,20 @@
         <button onclick="closeModal()">Play Again</button>
     </div>
     <audio id="bg-music" loop>
-      <source src="./sound/Ezios-family.mp3" type="audio/mpeg">
+      <source src="./sound/One-piece-ost.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
   </audio>
   
   
 
-  <audio id="place-sound" src="./sound/hidden-blade.mp3" preload="auto"></audio>
+  <audio id="place-sound" src="./sound/sword-sound.mp3" preload="auto"></audio>
 
   <audio id="win-sound">
-    <source src="./sound/Eagle-sound.mp3" type="audio/mpeg">
+    <source src="./sound/I'm Monkey D. Luffy and i will be king of the pirates Luffy Quote Sound Effect - One Piece.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   <audio id="lose-sound">
-    <source src="./sound/single-church-bell-156463.mp3" type="audio/mpeg">
+    <source src="./sound/op-win.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
@@ -67,6 +70,6 @@
 <div class="empty-space"></div>
 
     <footer>Made by Kamil Ali</footer>
-    <script src="ac.js"></script>
+    <script src="op.js"></script>
 </body>
 </html>

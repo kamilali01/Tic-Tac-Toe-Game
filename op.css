@@ -12,23 +12,32 @@ body {
     background-size: 400% 400%;
     animation: gradientAnimation 20s ease infinite;
     color: white;
-    font-family: 'Assassin', sans-serif;
+    font-family: 'OnePiece', sans-serif;
     background-position: center;
     background-size: cover;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url("./img/Assassins-vs-templars.png") center/cover;
+                url("./img/onepiece-bg.jpg") center/auto;
   }
-
   
   @keyframes gradientAnimation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-  }
+}
+.title-container{
+    display: flex;
+    justify-content: center;
+    min-width: 20rem;
+    align-items:start;
+}
 .title{
-    text-align: center;
+    height: 10rem;
+    width: auto;
+    position: absolute;
+    margin-top: -50px;  /* Adjust this value to move the image upwards */
 }
 .turn{
+    margin-top: 5rem;
     text-align: center;
 }
 .main-content {
@@ -64,7 +73,7 @@ body {
     
 }
 .cell:hover{
-    background-color: #920f0f;
+    background-color: #2c64cc;
 }
 /* Modal Styling */
 .modal {
@@ -81,6 +90,7 @@ body {
     z-index: 1000;
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
+    color: #dba538;
 }
 
 .modal-overlay {
@@ -109,8 +119,8 @@ body {
     margin-top: 10px;
     padding: 10px;
     border: none;
-    background: #860c0c;
-    color: white;
+    background: #0b74d6;
+    color: rgb(255, 255, 255);
     font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
@@ -118,11 +128,11 @@ body {
 }
 
 .modal button:hover {
-    background: #460707;
+    background: #103d57;
 }
 
 .feature-btn {
-    background: linear-gradient(45deg, #cb1111, #000000);
+    background: linear-gradient(45deg, #3c8ccc, #dba538);
     border: none;
     color: white;
     padding: 12px 20px;
@@ -140,7 +150,7 @@ body {
 }
 
 .feature-btn:hover {
-    background: linear-gradient(45deg, #000000, #cb1111);
+    background: linear-gradient(45deg, #dba538, #3c8ccc);
     transform: scale(1.1);
 }
 
@@ -160,7 +170,7 @@ footer {
     left: 0;
     width: 100%;
     height: 40px;
-    background-color: #d61c1c;
+    background-color: #3c8ccc;
     color: white;
     text-align: center;
     line-height: 40px;
@@ -168,7 +178,7 @@ footer {
 }
 
 #reset-score-btn{
-    background: linear-gradient(45deg, #cb1111, #000000);
+    background: linear-gradient(45deg, #3c8ccc, #dba538);
     border: none;
     color: white;
     padding: 5px 8px;
@@ -180,7 +190,7 @@ footer {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 #reset-score-btn:hover{
-    background: linear-gradient(45deg, #000000, #cb1111);
+    background: linear-gradient(45deg, #dba538, #3c8ccc);
     transform: scale(1.1);
 }
 #reset-score-btn:active{
@@ -206,8 +216,8 @@ footer {
     font-style: normal;
 }
 @font-face {
-    font-family: 'Assassin';
-    src: url('font/Assassin$.ttf') format('truetype');
+    font-family: 'OnePiece';
+    src: url('font/one-piece-font.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
