@@ -91,3 +91,6 @@ function toggleMusic() {
             musicBtn.innerHTML = "▶ Play Music";
     }
 }
+window.addEventListener('load', () => {
+    toggleMusic(); // This will start the music automatically
+});
