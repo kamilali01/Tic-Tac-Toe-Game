@@ -9,7 +9,9 @@
 <body>
     <h1 class="title">Tic Tac Toe</h1>
     <p class="turn"></p>
+    
     <div class="main">
+      
       <div class="container">
         <div class="cell cell-1"></div>
         <div class="cell cell-2"></div>
@@ -21,7 +23,13 @@
         <div class="cell cell-8"></div>
         <div class="cell cell-9"></div>
       </div>
+      
+      
     </div>
+    <div class="scorePan"><h2>Score</h2>
+      <p>X: <span id="x-score">0</span> - O: <span id="o-score">0</span></p>
+      <button id="reset-score-btn" onclick="resetScore()">Reset Score</button></div>
+    
     <!-- Winner Modal -->
     <div class="modal-overlay"></div>
     <div class="modal">
@@ -34,6 +42,13 @@
   </audio>
   
   <button id="music-btn" onclick="toggleMusic()">▶ Play Music</button>
+
+  <audio id="place-sound" src="./sound/spacebar-click-keyboard-199448.mp3" preload="auto"></audio>
+
+  <audio id="win-sound">
+    <source src="./sound/message-incoming-132126.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
     <footer>Made by Kamil Ali</footer>
     <script src="index.js"></script>
