@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background: linear-gradient(270deg, #200722, #120627, #3c0180, #5900fd);
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+    color: white;
+    font-family: 'Assassin', sans-serif;
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url("./img/Assassins-vs-templars.png") center/cover;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+.title{
+    text-align: center;
+}
+.turn{
+    text-align: center;
+}
+.main-content {
+    flex-grow: 1;  /* Allow content to grow and fill available space */
+    padding-bottom: 40px;  /* Space for the footer */
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: 8em 8em 8em;
+}
+.cell{
+    border: 1px white solid;
+    min-height: 8em;
+    min-width: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 8em;
+    max-width: 8em;
+    transition: background-color 0.2s ease-in-out; /* Smooth transition */
+
+    
+    
+}
+.cell:hover{
+    background-color: #920f0f;
+}
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 999;
+    transition: background 0.5s ease;
+}
+
+/* Show Modal with Animation */
+.modal.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-overlay.show {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #860c0c;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+.modal button:hover {
+    background: #460707;
+}
+
+.feature-btn {
+    background: linear-gradient(45deg, #cb1111, #000000);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    height: 6rem;
+    width: 6rem;
+}
+#p-btn img{
+    max-height: 3em;
+}
+
+.feature-btn:hover {
+    background: linear-gradient(45deg, #000000, #cb1111);
+    transform: scale(1.1);
+}
+
+.feature-btn:active {
+    transform: scale(0.9);
+}
+.feature-btn img{
+    max-width: 3rem;
+    max-height: auto;
+    filter: invert(1);
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #d61c1c;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'MyCustomFont';
+}
+
+#reset-score-btn{
+    background: linear-gradient(45deg, #cb1111, #000000);
+    border: none;
+    color: white;
+    padding: 5px 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+#reset-score-btn:hover{
+    background: linear-gradient(45deg, #000000, #cb1111);
+    transform: scale(1.1);
+}
+#reset-score-btn:active{
+    transform: scale(0.9);
+}
+.scorePan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('font/StarcruiserSemiItalic-XpMo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Expanded';
+    src: url('font/Starcruiser-oLpV.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Assassin';
+    src: url('font/Assassin$.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.features-container{
+    min-height: 6rem;
+    min-width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.features-container-container{
+    display: flex;
+    justify-content: center;
+}
+.empty-space{
+    height: 5rem;
+}
+.features{
+    border-radius: 20%;
+    height: 5.5rem;
+    width: auto;
+    width: 5.5rem;
+}

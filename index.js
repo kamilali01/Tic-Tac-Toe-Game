@@ -143,6 +143,6 @@ function toggleMusic() {
             musicBtn.innerHTML = "▶ Play Music";
     }
 }
-window.addEventListener('load', () => {
-    toggleMusic(); // This will start the music automatically
+document.getElementById("ac-btn").addEventListener("click", function () {
+    window.location.href = "ac.html";
 });
