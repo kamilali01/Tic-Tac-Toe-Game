@@ -78,3 +78,16 @@ function closeModal() {
         resetBoard();
     }, 500);
 }
+
+const music = document.getElementById("bg-music");
+const musicBtn = document.getElementById("music-btn");
+
+function toggleMusic() {
+    if (music.paused) {
+            music.play();
+            musicBtn.innerHTML = "⏸ Pause Music";
+    } else {
+            music.pause();
+            musicBtn.innerHTML = "▶ Play Music";
+    }
+}
