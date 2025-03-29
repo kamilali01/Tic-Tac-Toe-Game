@@ -169,8 +169,8 @@ function toggleMusic() {
 document.getElementById("og-btn").addEventListener("click", function () {
     window.location.href = "index.html";
 });
-document.getElementById("op-btn").addEventListener("click", function () {
-    window.location.href = "op.html";
+document.getElementById("viking-btn").addEventListener("click", function () {
+    window.location.href = "viking.html";
 });
 document.getElementById("ac-btn").addEventListener("click", function () {
     window.location.href = "ac.html";

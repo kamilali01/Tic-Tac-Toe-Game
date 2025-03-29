@@ -54,7 +54,7 @@ function placeMarker(cell, index) {
             }
             updateScore(marker);
             showModal();  // This will show the winner modal with the correct message
-        }, 300);
+        }, 200);
         return;
     }
 
@@ -146,9 +146,10 @@ function resetScore() {
 const music = document.getElementById("bg-music");
 const musicBtn = document.getElementById("music-btn");
 music.volume = 0.3;
-placeSound.playbackRate = 2;
+placeSound.playbackRate = 3;
 winSound.playbackRate = 1.5;
 loseSound.volume = 0.5;
+winSound.currentTime = 0.5;
 
 document.addEventListener("DOMContentLoaded", function () {
     let bgMusic = document.getElementById("bg-music");
@@ -168,4 +169,7 @@ document.getElementById("og-btn").addEventListener("click", function () {
 });
 document.getElementById("op-btn").addEventListener("click", function () {
     window.location.href = "op.html";
+});
+document.getElementById("viking-btn").addEventListener("click", function () {
+    window.location.href = "viking.html";
 });

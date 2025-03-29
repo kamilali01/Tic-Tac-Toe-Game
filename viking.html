@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicxTacxToe</title>
+    <link rel="stylesheet" href="viking.css">
+</head>
+<body>
+    <div class="title-container">
+        <img class="title" src="./img/vikings-title.png" alt="Vikings logo">
+    </div>
+    
+    <p class="turn"></p>
+    
+    <div class="main">
+      
+      <div class="container">
+        <div class="cell cell-1"></div>
+        <div class="cell cell-2"></div>
+        <div class="cell cell-3"></div>
+        <div class="cell cell-4"></div>
+        <div class="cell cell-5"></div>
+        <div class="cell cell-6"></div>
+        <div class="cell cell-7"></div>
+        <div class="cell cell-8"></div>
+        <div class="cell cell-9"></div>
+      </div>
+      
+      
+    </div>
+    <div class="scorePan"><h2>Score</h2>
+      <p style="font-size: 2rem;"><img style="max-height: 1em;" src="./img//viking-color.png" alt="">: <span id="x-score">0</span> - <img style="max-height: 1em; filter: invert(1); " src="./img/saxon-color.png" alt="">: <span id="o-score">0</span></p>
+      <button id="reset-score-btn" onclick="resetScore()">Reset Score</button></div>
+    
+    <!-- Winner Modal -->
+    <div class="modal-overlay"></div>
+    <div class="modal">
+        <h2 id="winnerText"></h2>
+        <button onclick="closeModal()">Play Again</button>
+    </div>
+    <audio id="bg-music" loop>
+      <source src="./sound/viking-bg-music.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+  
+  
+
+  <audio id="place-sound" src="./sound/hit-armor-03-266300.mp3" preload="auto"></audio>
+
+  <audio id="lose-sound">
+    <source src="./sound/battle_horn_1-6931.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="win-sound">
+    <source src="./sound/op-win.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <p style="text-align: center; margin-top: 2rem">Features</p>
+
+  <div class="features-container-container">
+  <div class="features-container">
+    <div class="features features-1"><button class="feature-btn" id="music-btn" onclick="toggleMusic()">⏸ Pause Music</button></div>
+    <div class="features features-2"><button class="feature-btn" id="ac-btn"><img src="./img/assassins-creed.png" alt=""> Theme</button></div>
+    <div class="features features-3"><button class="feature-btn" id="op-btn"><img src="./img/strawhat.png" alt=""> Theme</button></div>
+    <div class="features features-4"><button class="feature-btn" id="og-btn">XO Theme</button></div>
+  </div>
+</div>
+<div class="empty-space"></div>
+
+    <footer>Made by Kamil Ali</footer>
+    <script src="viking.js"></script>
+</body>
+</html>

@@ -149,3 +149,6 @@ document.getElementById("ac-btn").addEventListener("click", function () {
 document.getElementById("op-btn").addEventListener("click", function () {
     window.location.href = "op.html";
 });
+document.getElementById("viking-btn").addEventListener("click", function () {
+    window.location.href = "viking.html";
+});
