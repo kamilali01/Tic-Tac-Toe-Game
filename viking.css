@@ -35,7 +35,6 @@ body {
     width: auto;
     position: absolute;
     margin-top: -50px;  /* Adjust this value to move the image upwards */
-    margin-left: 5em;
 }
 .turn{
     margin-top: 4rem;
