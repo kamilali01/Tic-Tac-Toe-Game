@@ -12,11 +12,11 @@ body {
     background-size: 400% 400%;
     animation: gradientAnimation 50s ease infinite;
     color: white;
-    font-family: 'Norse', sans-serif;
+    font-family: 'Assassin', sans-serif;
     background-position: center;
     background-size: cover;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url("./img/Assassins-vs-templars.png") center/auto;
+                url("./img/Assassins-vs-templars.png") center/120%;
   }
 
   
